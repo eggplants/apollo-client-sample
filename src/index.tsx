@@ -29,18 +29,18 @@ query ($id: Int) {
 
   const query = () => {
     let client = getClient(endpoint);
-    setStatus("loading...")
+    setStatus("Loading...")
     setButtonDisabled(true)
     client
       .query({ query: gql`${inputValue}`,  })
       .then(r => {
         setResultValue(JSON.stringify(r, null, 2))
-        setStatus("success!")
+        setStatus("Successful!")
         setButtonDisabled(false)
       })
       .catch(err => {
         alert(err)
-        setStatus("failed...")
+        setStatus("Failed...")
         setButtonDisabled(true)
       })
   }
