@@ -2,7 +2,7 @@ import { useState } from "react";
 import { URI } from "./constraints/config";
 import ReactDOM from "react-dom";
 import gql from "graphql-tag";
-import "monaco-graphql";
+// import "monaco-graphql";
 import MonacoEditor from "react-monaco-editor";
 
 import { getClient } from "./lib/query";
