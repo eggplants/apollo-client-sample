@@ -31,7 +31,7 @@ query ($id: Int) {
   const client = getClient(endpoint);
 
   const query = () => {
-    setStatus("loading...");
+    setStatus("Loading...");
     setButtonDisabled(true);
     client
       .query({
@@ -41,12 +41,12 @@ query ($id: Int) {
       })
       .then((r) => {
         setResultValue(JSON.stringify(r, null, 2));
-        setStatus("success!");
+        setStatus("Successful!");
         setButtonDisabled(false);
       })
       .catch((err) => {
         alert(err);
-        setStatus("failed...");
+        setStatus("Failed...");
         setButtonDisabled(true);
       });
   };
